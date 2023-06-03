@@ -18,7 +18,7 @@ namespace Kuznechik_Encryption.Encryption
                     p ^= a;
 
                 byte hi_bit_set = (byte)(a & 0x80);
-                a <<= 1;
+                a = (byte)((a << 1) & 0xff);
 
                 if (hi_bit_set != 0)
                     a ^= 0xc3;
